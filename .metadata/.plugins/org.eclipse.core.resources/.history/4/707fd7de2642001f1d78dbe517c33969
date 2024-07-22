@@ -1,0 +1,53 @@
+package Data_Hora;
+
+import java.time.LocalDate;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner ( System.in);
+		/* Data[hora]local:
+		 ano-mês-dia-[hora] sem fuso horário ( hora é opcional )
+		 
+		 - LocalDate
+		 - LocalDateTime
+		 */
+		
+		
+		
+		/* Data-hora global:
+		 ano-mês-dia-hora com fuso horário 
+		 
+		 - Insntant
+		 
+		 */
+		
+		
+		/* Duração:
+		  tempo decorrido entre duas data-horas 
+		  
+		  - Duration
+		  
+		  - Outros:
+		  
+		    Zoneld
+		    ChronoUnit
+		  
+		  */
+		
+		
+		// Instanciando ( instante atual ):
+		LocalDate data1= LocalDate.now();
+		System.out.println(data1);
+		
+		
+		
+		
+		sc.close();
+
+	}
+
+}

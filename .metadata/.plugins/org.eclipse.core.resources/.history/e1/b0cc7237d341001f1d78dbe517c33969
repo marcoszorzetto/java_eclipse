@@ -1,0 +1,50 @@
+package Program;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class ExercicioMatriz {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		/*
+		 * Criar uma matriz com N linhas e N colunas, selecionar um elemento da matriz
+		 * mostrar a(s) posição/posições em que aparece e mostrar os elementos a
+		 * esquerda, direita, acima e abaixo de cada aparição na matriz
+		 */
+
+		int[][] numeros = new int[][] { 
+			{ 1, 2, 3 }, 
+			{ 4, 5, 7 }, 
+			{ 7, 8, 9 } };
+         
+			
+			for(int i=0; i< 3; i++) {
+				System.out.println();
+				for(int j=0; j<3; j++) {
+					
+					System.out.printf(" %d ", numeros[i][j]);
+				}
+			}
+			
+			
+			System.out.print("\n\nEntre com um número que conste na matriz: ");
+			int numeroPesquisa= sc.nextInt();
+			for(int i=0; i<3; i++) {
+			
+				for ( int j=0; j<3; j++) {
+				if(numeroPesquisa == numeros[i][j]) {
+					System.out.print("         | Linha  | Coluna |\n");
+					System.out.print("          ________ ________\n");
+					System.out.printf("Posição: |   %d    |   %d    |", i, j);
+					System.out.print("\n         |________|________|\n");
+				}	
+				}
+			}
+			
+		sc.close();
+
+	}
+
+}

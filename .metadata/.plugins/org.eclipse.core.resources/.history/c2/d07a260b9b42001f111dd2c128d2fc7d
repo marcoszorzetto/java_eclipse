@@ -1,0 +1,66 @@
+package Data_Hora;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner ( System.in);
+		/* Data[hora]local:
+		 ano-mês-dia-[hora] sem fuso horário ( hora é opcional )
+		 
+		 - LocalDate
+		 - LocalDateTime
+		 */
+		
+		
+		
+		/* Data-hora global:
+		 ano-mês-dia-hora com fuso horário 
+		 
+		 - Insntant
+		 
+		 */
+		
+		
+		/* Duração:
+		  tempo decorrido entre duas data-horas 
+		  
+		  - Duration
+		  
+		  - Outros:
+		  
+		    Zoneld
+		    ChronoUnit
+		  
+		  */
+		
+		
+		// Instanciando ( instante atual sem hora ):
+		LocalDate data= LocalDate.now();
+		System.out.println("Data Atual:              " + data);
+		// Instanciando ( instante atual com hora ):
+		LocalDateTime dataComHora= LocalDateTime.now();
+		System.out.println("Data Atual com hora:     " + dataComHora);
+		// Instanciando ( instante atual com hora GNT ):
+		Instant dataComHoraGnt = Instant.now();
+		System.out.println("Data Atual com hora GNT: " + dataComHoraGnt);
+		// Instanciando uma data com um texto digitado
+		LocalDate dataComTexto = LocalDate.parse("2024-12-31");
+		System.out.println("Data com texto digitado: " + dataComTexto);
+		// Instanciando uma data com hora em texto digitado
+		LocalDateTime dataComTextoHora =LocalDateTime.parse("2024-12-31T03:33:3");
+		System.out.println("Data com hora em texto digitado: " + dataComTextoHora);
+		
+		
+		
+		sc.close();
+
+	}
+
+}
